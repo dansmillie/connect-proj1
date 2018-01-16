@@ -1,0 +1,140 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+
+\geometry{letterpaper, portrait, margin=1in}
+\newcommand{\ul}[0]{\underline}
+\newcommand{\hs}[1]{\hspace*{#1 cm}}
+\newcommand{\ind}[0]{\indent}
+\newcommand{\tx}[1]{\text{#1}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}{Remark}
+
+
+\title{Visualized Inspection of Tau for Alzheimer’s Loci}
+\author{
+  Nestor, Irving
+  \and
+  Smillie, Dan
+  \and
+  Soong, Brian
+  \and
+  Torgas, Kevin
+}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Overview}
+
+\ind\ind Alzheimer’s disease exhibits a pathology that presents itself perfectly for study through connectomics. Research has pointed to Tau proteins as a source for the spread of the disease throughout the brain in an infectious manner, causing neuron death(reddit study citation). Because of this, it is reasonable to consider studying this spread using a connectomics approach. Although a mesoscale connectome of the mouse brain already exists, observing the connectivity of affected brain regions at a microscale level could yield promising results for predicting disease spread and neuron death as the disease progresses. By constructing detailed structural connectomes and comparing them to the spread patterns of disease through that same brain, one could produce a correlation between connectivity and spread of Tau protein. Should such a correlation exist, this knowledge could prove invaluable, enabling precise treatment approaches, specifically targeting at-risk regions determined through the generated brain graphs.
+
+
+\section{Hardware \& Facilities}
+
+\ind\ind Imaging hardware will be necessary for the construction of two entire mouse connectomes. One mouse will be a healthy control and the other will be a genetically modified to exhibit Alzheimer’s like symptoms. A PET scanner will be necessary to image the spread of the Tau proteins in the infected mouse. Care of the mice will take place in house (in our facility). \\
+
+A mouse will be genetically modified to show symptoms that mimic Alzheimer's disease. Two imaging techniques will be used to study the mice: both the naive mouse and the affected mouse will be sacrificed and be scanned with electron microscopy (EM), while only the affected mouse will undergo a PET scan to analyze the spread of Tau proteins. For this, a transmission electron microscope and a PET scanner will be necessary. \\
+
+	Two imaging techniques will be used: \\
+	
+	\begin{enumerate}
+	\item Mesoscale connectome of mouse brain (stp tomography)
+If certain sections of the brain exhibit high activity of tau protein or significant role in disease progression, perform a microscale connectome on that area (em)
+	\item Tau Protein spread imaging (PET)
+	\end{enumerate}
+
+	The mouse will not be sacrificed for tau protein analysis, but the mouse will be sacrificed if significant areas of tau identified
+
+
+\section{Data Collection}
+
+\subsection{Collection}
+
+\ind\ind Data will be collected through the two pathways of investigation, from PET scan visualizations of the tau protein spread and EM-produced microscale connectomes of healthy and affected mice. \\
+
+Along with naked-eye visual observation, weekly PET scans will be performed on the healthy and affected mouse until death by procured PET scanners. The data will be available in the form of industry-standard dynamic image formats. Stored on local workstations until compression and upload, the cost of the commonly available PET scanner and their nominal storage requirement remains negligible in comparison to the total budget. \\
+
+After mice death, the mice brains will be quickly dehydrated, preserved in resin, and finely sectioned into 50 nm slides. Scanned at voxel size 1 mm3, the data will take up approximately 1600 petabytes of data, at 2 petabytes per cubic millimeter and an average of 400 cubic millimeters per mouse brain. 
+
+\subsection{Information Extraction}
+
+\ind\ind After all raw data has been collected and stored properly, imaging and visualization steps will occur in order to extra tangible data from the mice. Through current image analysis techniques and learning networks, each section of mice brain will be scrutinized. After processing, we will have full connectomes of the healthy and affected mouse brain. \\
+
+As for the PET scans, the data collected weekly will be compiled into a dynamic model, visualizing time based proliferation of the tau protein through the affected mouse’s brain. These will be compared visually and statistically with the connectomes, through both simple observation and topographical analysis using graph theory. From our results, we seek to identify key portions of the brain that correlate with accumulations of tau protein, and therefore the onset of Alzheimer's. We hope the connectomes will provide key insight into the specific wiring of those regions, and identify some factors that lead to tau spread and Alzheimer’s progression. 
+
+
+\section{Data Upload}
+
+\ind\ind We plan to program an easy way to interface with the data including building a library for easy data access, entry and annotation for researchers
+
+\section{Data Upload and Storage}
+
+\ind\ind The first challenge in dealing with this massive amount of data after imaging the mouse brain, is having a manageable way of storing this data. We have decided to use Amazon Web Service’s Glacier Storage as a low cost, durable, and reliable storage solution for our roughly 1600 Petabytes of data. \\
+
+This option makes the most sense as it does not require us to deal with managing the data after we upload it to Amazon’s servers. This means not only do we not have to worry about budgeting more resources for buying servers to hold all of this data, we also do not have to worry about hiring engineers to maintain the data and make sure it is always available for analysis.  Also by using Amazon Web Services, we can then easily make our data publicly available so others can reproduce or expand upon our results.
+
+\section{Cost}
+
+\ind\ind We estimate the cost of the various parts of this proposal to be the following \\
+
+\begin{center}
+ \begin{tabular}{||c c||} 
+ \hline
+ Item & Cost \\ [0.5ex] 
+ \hline\hline
+ PET Scanning & negligible \\ 
+ \hline
+ Microscale Connectomes & \$8 billion \\
+ \hline
+ Genetically Modified AD Mice & negligible \\
+ \hline
+ Devices for Data Storage & \$600 million  \\
+ \hline
+ Devices for Data Processing & \$100 million  \\
+ \hline
+ Electron Microscope (5) &  \$5 million\\ 
+ \hline
+ Lab Insurance & \$2 million \\ 
+ \hline
+ Public Education, Conferences, etc. & \$5 million \\ 
+ \hline
+ Researcher and Staff Salary & \$1 million \\ 
+ \hline
+ 10\% Standard Budgeting Buffer & \$1 billion \\[1ex] 
+ \hline\hline
+ Total & \$9.72 billion \\
+ \hline
+\end{tabular}
+\end{center}
+
+\section{Feasibility} 
+
+\ind\ind The feasibility of a project of this scale comes down to two premises: the validity of our scientific method and the availability of the resources to execute such research. We believe that our question is not only interesting and compelling, but also that current research already lights the way to success in answering our question using connectomics. \\
+
+Given that the scientific consensus on the propagation of Alzheimer’s disease in the brain is that the Tau protein has strong influence on progression and development, we believe that our research model will be efficacious. Along the way, we expect to open up new frontiers in neuroscience and data science as we will be building the brain’s macro-structures all from micro-level. \\
+
+We also have responsibility and cost-efficiency at the forefront of our model so that we ensure a full-brain result-- perhaps the most important product to be released to the public this decade. To do this, we have a healthy 10\% budgeting buffer to ensure that any oversights are planned for. We’ve also outsourced both our cloud-computing and cloud-storage platforms in order to increase predictability of cost instead of doing unnecessarily risky and costly software/hardware development. With lab insurance we have reduced risk even further of our entire lab. Our conservative connectome imaging cost estimate gives our grantors piece of mind knowing that we will have two whole brains processed by our 5 year term. All these securities both increase our chances of success and decrease the chances of resource hemorrhaging that plagues many organizations that lose sight of the goal.
+
+
+\section{References}
+
+https://www.nature.com/articles/nature13186
+
+
+
+
+
+
+%
+
+\end{document}
